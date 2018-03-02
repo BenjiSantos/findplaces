@@ -19,9 +19,6 @@ const REQUEST_URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/jso
 class dashboardView extends Component {
     constructor(props){
         super(props);
-        this.timestamp = 1;
-        this.public_key = '8facae1819d54a5ce088bb30da0d1f94';
-        this.private_key =  '82a274764b0c4574fddccbcbb779945aeaf939ad';
         this.state = {
             dataSource: new ListView.DataSource({
                 rowHasChanged: (row1,row2) => row1 !== row2
@@ -56,7 +53,7 @@ class dashboardView extends Component {
     renderLoadingView(){
         return(
         <View style= {styles.container}>
-            <Text style={{}}>Cargando comics....</Text>
+            <Text style={{}}>Cargando lugares....</Text>
         </View>)
     }
     renderPlace(place){
@@ -88,8 +85,6 @@ class dashboardView extends Component {
         )
     }
 }
-
-
 
 const styles = StyleSheet.create({
     container: {
